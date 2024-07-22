@@ -1,0 +1,30 @@
+# Ignore the virtual environment directory
+venv/
+
+# Ignore Python cache files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Ignore Jupyter Notebook checkpoints
+.ipynb_checkpoints
+
+# Ignore IDE/editor specific files
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# Ignore system specific files
+.DS_Store
+Thumbs.db
+
+# Ignore other temporary files
+*.log
+*.tmp
+*.bak
+*.swp
+
+# Ignore Pygame specific cache files
+*.pyo
+*.pyd
