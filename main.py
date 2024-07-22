@@ -5,8 +5,8 @@ from maze import *
 pg.init()
 
 # Set the width and height of the window
-WIDTH = 800
-HEIGHT = 600
+WIDTH = 1200
+HEIGHT = 800
 SIDE_LEN = 12
 WALL_WEIGHT = SIDE_LEN // 2
 WALL_LEN = SIDE_LEN + WALL_WEIGHT*2
@@ -82,8 +82,16 @@ running = True
 clock = pg.time.Clock()
 fps = 60
 
-maze = Maze(20, 30)
-generator = MazeGenerator(maze, (10, 15))
+while True:
+    try:
+        nrow = int(input("Enter the number of rows: "))
+        ncol = int(input("Enter the number of columns: "))
+        break
+    except ValueError:
+        print("Please enter a valid integer.")
+
+maze = Maze(nrow, ncol)
+generator = MazeGenerator(maze, (random.randint(0, nrow-1), random.randint(0, ncol-1)))
 
 while running:
     # Handle events
